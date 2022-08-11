@@ -1,12 +1,4 @@
 class Nobody():
-    def __init__(self, name:str):
+    def __init__(self, name: str):
         self.name = name
-        if self.name != 'Nobody':
-            self.name = "I'm Nobody, not" + ' ' + name
-        else:
-            self.name = 'Nobody'
-    def qwe(self):
-        print(self.name)
-
-alex = Nobody('alex')
-alex.qwe()
+        self.name = f"I'm Nobody, not {name}" if self.name != 'Nobody' else 'Nobody'
